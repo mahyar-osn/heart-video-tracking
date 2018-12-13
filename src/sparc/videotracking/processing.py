@@ -7,7 +7,10 @@ import os
 import cv2
 
 from PIL import Image
-import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 import numpy as np
 import scipy
